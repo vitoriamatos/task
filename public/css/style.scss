@@ -1,0 +1,229 @@
+* {
+    padding: 0 auto;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;;
+  }
+  
+  body {
+    background-image: linear-gradient( 102.7deg, rgba(253,218,255,1) 8.2%, rgba(223,173,252,1) 19.6%, rgba(173,205,252,1) 36.8%, rgba(173,252,244,1) 73.2%, rgba(202,248,208,1) 90.9% );
+    font-family: "Open Sans";
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 0.875rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+   
+  }
+
+  .title {
+
+  padding: 20px;
+  display: inline;
+  justify-content: left;
+  }
+
+  .title h3{
+    font-weight: 700px!important;
+    margin-top: 20px;
+  }
+  .save_task{
+
+     background-color: blueviolet!important;
+     color: white;
+     padding: 10px;
+     border-radius: 300px;
+     border: none;
+     font-size: 20px;
+     margin-right: 60px;
+     margin-bottom: 20px;
+  }
+
+  .save_task:hover{
+
+    background-color: rgb(92, 28, 153)!important;
+ }
+  .task_button {
+ float: right!important;
+  }
+
+  .dashboard {
+    margin-top: 40px;;
+    background: #ffffff!important;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+   
+ }
+  
+  .header_task{
+    display: flex;
+  }
+  .checkbox {
+    position: relative;
+    top: rem(-6);
+  
+    margin: 0 1rem 0 0;
+  
+    cursor: pointer;
+  
+    &:before {
+      @include transition(all 0.3s ease-in-out);
+  
+      content: "";
+  
+      position: absolute;
+      left: 0;
+      z-index: 1;
+  
+      width: 1rem;
+      height: 1rem;
+  
+      border: 2px solid #f2f2f2;
+    }
+  
+    &:checked {
+      &:before {
+       transform: rotate(-45deg);
+  
+        height: 0.5rem;
+  
+        border-color: #009688;
+        border-top-style: none;
+        border-right-style: none;
+      }
+    }
+  
+    &:after {
+      content: "";
+  
+      position: absolute;
+      top: rem(-2);
+      left: 0;
+  
+      width: 1.1rem;
+      height: 1.1rem;
+  
+      background: #fff;
+  
+      cursor: pointer;
+    }
+  }
+  
+
+
+  .task_list{
+    display: block;
+    text-align: left;
+    padding-left: 0px!important;
+   
+  }
+
+  .task_item{
+   border-top: 1px solid #cccccc72;
+    padding: 2%;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    width:100%;
+  }
+
+  .task_title label{
+    font-size:  32px;
+    margin-left: 20px;
+    font-weight: 400;
+    padding: 8px;
+
+  }
+
+  .task_title label:focus, .task_description h6:focus{
+    background-color: #cccccc70;
+    border-radius: 8px;
+    padding: 8px;
+    border: 0 none!important;
+    outline: 0;
+
+  }
+
+
+  .task_body{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+  }
+
+  .task_description{
+    padding-bottom: 8px;
+    margin-top: 20px;
+    margin-left: 50px;
+    color: #000000;
+   
+  }
+
+  .task_description h6{
+    padding: 8px!important;
+    font-weight: 300!important;
+  }
+
+  .delete-task{
+    background-color: transparent!important;
+    border: none;
+    font-size: 20px;
+    color: #ccc;
+  }
+
+  .delete-task:hover{
+    color: blueviolet;
+  }
+
+  .register_task_item{
+    margin-bottom: 20px;
+  }
+
+  .register_task_item input{
+    width: 100%;
+   background-color: #f2f2f2;
+   padding: 10px;
+   border: none;
+   border-bottom: 2px solid transparent!important;
+  }
+
+  .register_task_item input:focus{
+
+    border: none;
+    border: 0 none!important;
+    outline: 0;
+    border-bottom: 2px solid blueviolet!important;
+   }
+
+   .register_task_item textarea{
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid transparent!important;
+   }
+ 
+   .register_task_item textarea:focus{
+     border: none;
+     border: 0 none!important;
+     outline: 0;
+     border-bottom: 2px solid blueviolet!important;
+    }
+
+    .save-subtask{
+      background-color: blueviolet!important;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      color: white;
+      font-size: 18px;
+    }
+
+    .nav-link.nav_task.active{
+      color: rgb(255, 255, 255);
+      background-color: blueviolet;
+    }
+
+    .nav-link.nav_task{
+      color: rgb(0, 0, 0);
+    }
